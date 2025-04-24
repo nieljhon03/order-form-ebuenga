@@ -1,0 +1,260 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Change to column */
+    align-items: center; /* Center items horizontally */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #FF6B00;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    display: block;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="datetime-local"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #FFD43B;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="datetime-local"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #FF8533;
+}
+
+textarea {
+    resize: vertical;
+    border: 2px solid #FFD43B;
+    border-radius: 6px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button {
+    padding: 14px 25px;
+    margin-top: 25px;
+    background-color: #FF6B00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: center;
+    width: 200px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form button:hover {
+    background-color: #FF4500;
+    transform: translateY(-2px);
+}
+
+.burger-images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.burger-images img {
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.burger-images img:hover{
+    transform: scale(1.04);
+}
+
+
+.fries-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.fries-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.fries-images img {
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.fries-images img:hover {
+    transform: scale(1.04);
+}
+
+.fries-flavors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.fries-flavors label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.fries-flavors img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pasta-options {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.pasta-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pasta-choice img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    transition: transform 0.2s ease;
+}
+
+.pasta-choice label {
+    font-weight: normal;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.extra-sauce-option {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.extra-sauce-option label {
+    font-weight: normal;
+}
+
+.drink-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.drink-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.drink-item img {
+    width: 60px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+.drink-item label {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 0.9em;
+}
+
+.drink-item select,
+.drink-item input[type="number"] {
+    width: 80%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+    order: -1; 
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}

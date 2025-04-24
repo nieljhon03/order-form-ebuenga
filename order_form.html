@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+             <img src="logo.png" alt="Company Logo">
+        </div>
+        <h1>Customer Order Form</h1>
+
+        <form action="#" method="POST">
+            <h2>Customer Information</h2>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="address">Complete Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="instructions">How to Get to the Place:</label>
+            <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+            <label for="date">Delivery Date/Time:</label>
+            <input type="datetime-local" id="date" name="date" required>
+
+            <h2>Order Form</h2>
+
+            <h3>Burgers</h3>
+            <div class="burger-images">
+                <img src="burger1.jpg" alt="Burger 1" width="200">
+                <img src="burger2.jpg" alt="Burger 2" width="200">
+            </div>
+            <label>Patty Type:</label>
+            <input type="radio" id="single" name="burger_patties" value="single" checked>
+            <label for="single">Single Patty</label>
+            <input type="radio" id="double" name="burger_patties" value="double">
+            <label for="double">Double Patty</label>
+
+            <label>Additional Toppings:</label>
+            <input type="checkbox" id="cheese" name="toppings[]" value="cheese">
+            <label for="cheese">Cheese</label>
+            <input type="checkbox" id="bacon" name="toppings[]" value="bacon">
+            <label for="bacon">Bacon</label>
+            <input type="checkbox" id="coleslaw" name="toppings[]" value="coleslaw">
+            <label for="coleslaw">Coleslaw</label>
+            <br>
+            <label for="bun">Choice of Bun:</label>
+            <select id="bun" name="bun">
+                <option value="white">White Bun</option>
+                <option value="wheat">Wheat Bun</option>
+                <option value="honey_oat">Honey Oat</option>
+                <option value="sugar_free">SugarFree</option>
+            </select>
+
+            <label for="burger_quantity">Quantity:</label>
+            <input type="number" id="burger_quantity" name="burger_quantity" min="1" value="1">
+
+            <h3>Pasta</h3>
+            <div class="pasta-options">
+                <div class="pasta-choice">
+                    <img src="pasta/carbonara.png" alt="Carbonara">
+                    <label for="carbonara">Carbonara</label>
+                    <input type="checkbox" id="carbonara" name="pasta_type[]" value="carbonara">
+                </div>
+                <div class="pasta-choice">
+                    <img src="pasta/pesto.png" alt="Pesto">
+                    <label for="pesto">Pesto</label>
+                    <input type="checkbox" id="pesto" name="pasta_type[]" value="pesto">
+                </div>
+                <div class="pasta-choice">
+                    <img src="pasta/spaghetti.png" alt="Spaghetti">
+                    <label for="spaghetti">Spaghetti</label>
+                    <input type="checkbox" id="spaghetti" name="pasta_type[]" value="spaghetti">
+                </div>
+                <div class="pasta-choice">
+                    <img src="pasta/extracheese.png" alt="Extra Cheese">
+                    <label for="extra_cheese">Extra Cheese</label>
+                    <input type="checkbox" id="extra_cheese" name="pasta_type[]" value="extra_cheese">
+                </div>
+            </div>
+
+            <div class="extra-sauce-option">
+                <input type="checkbox" id="extra_sauce" name="extra_sauce" value="yes">
+                <label for="extra_sauce">Add Extra Sauce</label>
+            </div>
+
+            <label for="pasta_quantity">Quantity:</label>
+            <input type="number" id="pasta_quantity" name="pasta_quantity" min="1" value="1">
+
+            <h3 class="fries-section">Fries</h3>
+                <div class="fries-images">
+                    <img src="fries1.jpg" alt="Fries" >
+                </div>
+                <label>Size:</label>
+                <select id="fries_size" name="fries_size">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                </select>
+
+                <div class="fries-flavors">
+                    <label>Flavor:</label>
+                    <input type="checkbox" id="bbq" name="fries_flavor[]" value="bbq">
+                    <label for="bbq">BBQ</label>
+                    <img src="fries flavors/bbq.jfif" alt="BBQ Flavor">
+
+                    <input type="checkbox" id="cheese_f" name="fries_flavor[]" value="cheese">
+                    <label for="cheese_f">Cheese</label>
+                    <img src="fries flavors/cheese.jfif" alt="Cheese Flavor">
+
+                    <label for="sour_cream">Sour Cream</label>
+                    <input type="checkbox" id="sour_cream" name="fries_flavor[]" value="sour_cream">
+                    <img src="fries flavors/sourcream.jfif" alt="Sour Cream Flavor">
+
+                </div>
+
+            <label for="fries_quantity">Quantity:</label>
+            <input type="number" id="fries_quantity" name="fries_quantity" min="1" value="1">
+
+            <h3>Drinks</h3>
+            <div class="drink-options">
+                <div class="drink-item">
+                    <img src="drinks/coke.png" alt="Coke">
+                    <label for="coke">Coke</label>
+                    <select id="coke_size" name="coke_size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <label for="coke_quantity">Qty:</label>
+                    <input type="number" id="coke_quantity" name="coke_quantity" min="0" value="0">
+                </div>
+                <div class="drink-item">
+                    <img src="drinks/sprite.png" alt="Sprite">
+                    <label for="sprite">Sprite</label>
+                    <select id="sprite_size" name="sprite_size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <label for="sprite_quantity">Qty:</label>
+                    <input type="number" id="sprite_quantity" name="sprite_quantity" min="0" value="0">
+                </div>
+                <div class="drink-item">
+                    <img src="drinks/icedtea.png" alt="Iced Tea">
+                    <label for="iced_tea">Iced Tea</label>
+                    <select id="iced_tea_size" name="iced_tea_size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <label for="iced_tea_quantity">Qty:</label>
+                    <input type="number" id="iced_tea_quantity" name="iced_tea_quantity" min="0" value="0">
+                </div>
+                <div class="drink-item">
+                    <img src="drinks/mountaindew.png" alt="Mountain Dew">
+                    <label for="mountain_dew">Mountain Dew</label>
+                    <select id="mountain_dew_size" name="mountain_dew_size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <label for="mountain_dew_quantity">Qty:</label>
+                    <input type="number" id="mountain_dew_quantity" name="mountain_dew_quantity" min="0" value="0">
+                </div>
+            </div>
+
+            <h2>Feedback</h2>
+            <label for="feedback">How can we improve this ordering form?</label>
+            <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+            <br>
+
+            <label>Delivery Option:</label>
+            <select id="delivery_option" name="delivery_option">
+                <option value="delivery">Delivery</option>
+                <option value="pickup">Pick-up</option>
+            </select>
+
+            <br><br>
+            <button type="submit" id="submit_order_button" class="order-button">Submit Order</button>
+            <button type="reset" id="clear_form_button" class="order-button">Clear Form</button>
+        </form>
+    </div>
+</body>
+</html>
